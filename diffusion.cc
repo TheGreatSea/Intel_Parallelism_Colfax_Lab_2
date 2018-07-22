@@ -24,12 +24,12 @@ int diffusion(const int n_particles,
          #pragma omp simd
            for (int i = 0; i < n_particles; i++) {
              x[i] = 0.0f;
-             x[i] += dist_func(alpha, rn);
+             x[i] += dist_func(alpha, rn[i]);
              } // for {i}
     
   } // for {j}
   for (int k = 0; k < n_particles; k++) {
-    if (x > x_threshold) n_escaped++;
+    if (x[k] > x_threshold) n_escaped++;
     } // for {k}
     return n_escaped;
 } // diffusion

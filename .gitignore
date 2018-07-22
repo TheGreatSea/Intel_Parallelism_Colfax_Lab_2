@@ -9,3 +9,6 @@
 
 #ignore memory swap file
 *.swp
+
+#ignore executable
+app
