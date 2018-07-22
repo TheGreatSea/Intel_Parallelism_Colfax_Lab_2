@@ -1,0 +1,11 @@
+#ignore zipped archive
+*.zip
+
+#ignore object files
+*.o
+
+#ignore reports
+*.optrpt
+
+#ignore memory swap file
+*.swp
