@@ -12,3 +12,7 @@
 
 #ignore executable
 app
+
+#ignore cluster error/output files
+vectorqueue.e*
+vectorqueue.o*

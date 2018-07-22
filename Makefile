@@ -14,4 +14,7 @@ app : main.cc diffusion.o distribution.o
 	icpc ${OPTRPT} ${CXXFLAGS} -o "$@" "$<" diffusion.o distribution.o
 
 clean :
-	rm app diffusion.o distribution.o *.optrpt
+	rm app diffusion.o distribution.o *.optrpt vectorqueue*
+
+queue :
+	echo 'cd $$PBS_O_WORKDIR ; ./app' | qsub -l nodes=1:flat -N vectorqueue
